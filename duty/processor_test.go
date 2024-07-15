@@ -64,5 +64,6 @@ func TestProcessor_Run(t *testing.T) {
 
 	err := p.Run(ctx)
 	assert.NoError(t, err)
+	// In the end we see that Aggregator duty came sooner than we discarded it and has been successfully processed
 	assert.Equal(t, []ws.DutyType{ws.Proposer, ws.Attester, ws.Aggregator, ws.SyncCommittee}, receivedDuties)
 }
