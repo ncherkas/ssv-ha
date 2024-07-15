@@ -1,5 +1,11 @@
 # ssv-ha
 
+## Run instructions
+```
+    go build 
+    ./duty-processor -endpoint=ws://127.0.0.1:5000
+```
+
 ## Notes & Considerations
  1) I've implemented this with a focus on possible re-orderings originating from WS stream. The idea behind my solution is to ensure that no duties are performed out of order. For this I had to relax data loss - if re-ordered late duties come too late they are discarded. 
  The wait time is configured and same way we could configure whethe the late duties are discarded or put into some deadletter queue.
