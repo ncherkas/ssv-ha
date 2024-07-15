@@ -2,7 +2,7 @@
 
 ## Run instructions
 ```
-    go build 
+    go build -o duty-processor main.go 
     ./duty-processor -endpoint=ws://127.0.0.1:5000
 ```
 
